@@ -26,9 +26,13 @@ const Hero_Section = () => {
             <img src={icons.info_icon} alt="play btn" />
             More Info
           </button>
+          <TitleCards />
         </div>
-        <TitleCards />
       </div>
+      <TitleCards title="Top Rated" bottom="-500px" />
+      <TitleCards title="Action Movies" bottom="-700px" />
+      <TitleCards title="Comedy" bottom="-900px" />
+      <TitleCards title="Thriller" bottom="-1100px" />
     </div>
   );
 };
