@@ -29,10 +29,12 @@ const Hero_Section = () => {
           <TitleCards />
         </div>
       </div>
-      <TitleCards title="Top Rated" bottom="-500px" />
-      <TitleCards title="Action Movies" bottom="-700px" />
-      <TitleCards title="Comedy" bottom="-900px" />
-      <TitleCards title="Thriller" bottom="-1100px" />
+      <div className="more-cards">
+        <TitleCards title="Blockbuster Movies" bottom="-208px" />
+        <TitleCards title="Only on Netflix" bottom="-418px" />
+        <TitleCards title="Upcoming" bottom="-628px" />
+        <TitleCards title="Top Pics for You" bottom="-838px" />
+      </div>
     </div>
   );
 };

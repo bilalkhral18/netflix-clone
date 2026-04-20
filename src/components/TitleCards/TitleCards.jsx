@@ -18,8 +18,11 @@ const TitleCards = ({ title, bottom }) => {
     };
   }, []);
   return (
-    <div className="titlecards" style={bottom ? { bottom: bottom } : {}}>
-      <h2>Popular on Netflix</h2>
+    <div
+      className="titlecards"
+      style={bottom ? { bottom: bottom, paddingLeft: "3.8%" } : {}}
+    >
+      {title ? <h2>{title}</h2> : <h2>Popular on Netflix</h2>}
 
       <div className="card_list" ref={cardsRef}>
         {cards_data.map((card, index) => (
