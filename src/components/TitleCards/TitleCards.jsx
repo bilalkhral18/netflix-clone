@@ -1,8 +1,10 @@
 import "./TitleCards.css";
 import cards_data from "../../assets/js/cards";
 import { useEffect, useRef } from "react";
-const TitleCards = ({ title, bottom }) => {
+
+const TitleCards = ({ title }) => {
   const cardsRef = useRef();
+
   useEffect(() => {
     const el = cardsRef.current;
 
@@ -17,17 +19,15 @@ const TitleCards = ({ title, bottom }) => {
       el.removeEventListener("wheel", handleWheel);
     };
   }, []);
+
   return (
-    <div
-      className="titlecards"
-      style={bottom ? { bottom: bottom, paddingLeft: "3.8%" } : {}}
-    >
-      {title ? <h2>{title}</h2> : <h2>Popular on Netflix</h2>}
+    <div className="titlecards">
+      <h2>{title ? title : "Popular on Netflix"}</h2>
 
       <div className="card_list" ref={cardsRef}>
         {cards_data.map((card, index) => (
           <div key={index} className="card">
-            <img src={card.image} alt="image not found" />
+            <img src={card.image} alt={card.name || "thumbnail"} />
             <p>{card.name}</p>
           </div>
         ))}
