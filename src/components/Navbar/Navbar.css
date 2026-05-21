@@ -67,3 +67,6 @@
   width: max-content;
   text-decoration: underline;
 }
+.nav_dark {
+  background-color: #141414;
+}
